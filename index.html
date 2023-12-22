@@ -12,7 +12,16 @@
   gtag('config', 'G-QS75JHDCCJ');
 </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
+                <script>
+                function downloadPDF() {
+                const pdf = new jsPDF();
+                    // Add content to the PDF (you may customize this based on your webpage structure)
+                pdf.text("Consequences of Mulch Production on Public Health", 10, 10);
+                pdf.fromHTML(document.body, 15, 15);
+              // Save the PDF
+                pdf.save('Consequences of Mulch Production on Public Health.pdf');
+                }
+                </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -199,16 +208,7 @@
                     </svg></a>
                       </span>
           </div>
-                <script>
-                function downloadPDF() {
-                const pdf = new jsPDF();
-                    // Add content to the PDF (you may customize this based on your webpage structure)
-                pdf.text("Consequences of Mulch Production on Public Health", 10, 10);
-                pdf.fromHTML(document.body, 15, 15);
-              // Save the PDF
-                pdf.save('Consequences of Mulch Production on Public Health.pdf');
-                }
-                </script>
+
           <!-- Add a button to trigger PDF download -->
                 <button onclick="downloadPDF()">Download PDF</button>
     </header>
